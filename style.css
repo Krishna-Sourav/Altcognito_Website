@@ -1,0 +1,141 @@
+/* header */
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display : flex;
+    align-items: center;
+    justify-content:space-evenly;
+    background-color: white; 
+    position: fixed;
+    z-index : 11;
+    top: 0;
+    margin-top: 0;
+    padding-top: 0;
+
+}
+.logo{
+    width : 125px;
+}
+
+#logo{
+    width : 750px;
+}
+
+a{
+    font-size: 20px;
+    color : #2c09a0;
+    text-decoration:none ;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    padding: 10px 0;
+}
+
+
+a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #2c0c92;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+a:hover::after {
+    width: 100%;
+}
+
+
+.fa-angle-down{
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+.header_elements{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Page1 */
+
+.page1{
+    margin-top: 50px;
+}
+
+.a{
+    color : #2c0c92;
+    display: flex;
+    font-size: 25px;
+    text-align : left;
+    margin : 20px;
+    flex-wrap:wrap;
+}
+
+#img1{
+    margin-left : 100px;
+    margin-top : 50px;
+    width : 350px;
+    height : 350px;
+    float : left;
+}
+
+#text1{
+    margin-top: 85px;
+    margin-left:85px;  
+}
+
+#text2{
+    font-size: 16px;
+    color : black;
+    text-align: left;
+    margin-left : 100px;
+}
+
+.carousel-container{
+    position: relative;
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.carousel{
+    display: flex;
+    transition: transform 2.0s ease-in-out;
+}
+  
+.carousel-slide img{
+    width: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+button.prev, button.next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev{
+    left: 10px;
+}
+
+button.next{
+    right: 10px;
+}
+
+.carousel-slide{
+    display: flex;
+}
